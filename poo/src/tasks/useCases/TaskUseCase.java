@@ -1,5 +1,8 @@
 package tasks.useCases;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import tasks.models.Task;
 
 // Inconsistencias en un hilo
@@ -9,11 +12,13 @@ import tasks.models.Task;
 // Contenerdor de metodos y atributos de la tarea
 public class TaskUseCase {
     // propiedades
-    List<Task> tasks; // lista vacía de tareas
+    private final List<Task> tasks; // lista vacía de tareas
 
     // Constructor
     public TaskUseCase() {
+        this.tasks = new ArrayList<>();
     }
+
 
     // Lista de tareas y queremos agregar una tarea a la lista de tareas
     public String create(String name, String description) {
