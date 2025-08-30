@@ -43,17 +43,11 @@ for (int i=0; i< task.size();i++){
         taskFound = task;
     }
     }
+    return "Tarea actualizada: " + taskFound.getName() + " Descripcion: " + taskFound.getDescription();
+}
+catch(Exception e){
+    return "Ha ocurrido un error, por favor intente de nuevo";
 }
 
  }
-
-    // Delete
-    public String delete(Task task) {
-        task = null;
-        return "Tarea Eliminada";
-    }
-
-    // Get
-public String get() {
-    return "Tarea: " + task.getName() + " Descripcion: " + task.getDescription() + " Estado: " + task.getStatus();
 }
